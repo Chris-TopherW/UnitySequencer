@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{5528BFAC-D149-0C2C-F24F-93F06100B532}") = "SequencerClasses", "Assembly-CSharp.csproj", "{AA635320-3866-BECA-19B1-0F2023FAE2AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA635320-3866-BECA-19B1-0F2023FAE2AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA635320-3866-BECA-19B1-0F2023FAE2AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA635320-3866-BECA-19B1-0F2023FAE2AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA635320-3866-BECA-19B1-0F2023FAE2AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,17 @@
+/Users/chriswratt/Documents/Uni2k16/401/BuildSequencer/SequencerClasses/Temp/bin/Debug/UnityEngine.dll
+/Users/chriswratt/Documents/Uni2k16/401/BuildSequencer/SequencerClasses/Temp/bin/Debug/UnityEditor.dll
+/Users/chriswratt/Documents/Uni2k16/401/BuildSequencer/SequencerClasses/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/chriswratt/Documents/Uni2k16/401/BuildSequencer/SequencerClasses/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/chriswratt/Documents/Uni2k16/401/BuildSequencer/SequencerClasses/Temp/bin/Debug/Mono.Cecil.dll
+/Users/chriswratt/Documents/Uni2k16/401/BuildSequencer/SequencerClasses/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/chriswratt/Documents/Uni2k16/401/BuildSequencer/SequencerClasses/Temp/bin/Debug/Unity.DataContract.dll
+/Users/chriswratt/Documents/Uni2k16/401/BuildSequencer/SequencerClasses/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/chriswratt/Documents/Uni2k16/401/BuildSequencer/SequencerClasses/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/chriswratt/Documents/Uni2k16/401/BuildSequencer/SequencerClasses/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/chriswratt/Documents/Uni2k16/401/BuildSequencer/SequencerClasses/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/chriswratt/Documents/Uni2k16/401/BuildSequencer/SequencerClasses/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/chriswratt/Documents/Uni2k16/401/BuildSequencer/SequencerClasses/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/chriswratt/Documents/Uni2k16/401/BuildSequencer/SequencerClasses/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/chriswratt/Documents/Uni2k16/401/BuildSequencer/SequencerClasses/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/chriswratt/Documents/Uni2k16/401/BuildSequencer/SequencerClasses/obj/Debug/Assembly-CSharp.dll
+/Users/chriswratt/Documents/Uni2k16/401/BuildSequencer/SequencerClasses/obj/Debug/Assembly-CSharp.dll.mdb
