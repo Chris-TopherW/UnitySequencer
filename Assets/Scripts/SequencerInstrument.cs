@@ -1,56 +1,64 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Audio;
 
 /// <summary>
 /// Instrument voice class for audio sequencer.
 /// </summary>
 
-public class SequencerInstrument : MonoBehaviour {
-
+public class SequencerInstrument : MonoBehaviour
+{	
 	public AudioClip audioClip;
-	public GameObject scoreObject;
+	public AudioSource audioSource;
+	public AudioMixer mixer;
 
-	private Score scoreScript;
-	private AudioSource audioSource;
+	[HideInInspector]
+	public bool[] score;
 
-	private int numSamples, DSPBufferingSize, playhead;
+	private int numSamples, DSPBufferingSize, playhead, phasor;
 	private float gain = 1.0f;
-	private string instrumentName;
 	private float[] sampleBuffer;
 	private bool processAudio;
 
-	void Awake ()
+	void Awake()
 	{
 		audioSource = GetComponent<AudioSource> ();
+		score = new bool[Metronome.metro.ticksPerBar];
+	}
+
+	void Start ()
+	{
 		numSamples = audioClip.samples;
 		DSPBufferingSize = Metronome.metro.getDSPBufferSize ();
 
-		//Score setup
-		scoreScript = scoreObject.GetComponent<Score>();
-		instrumentName = this.gameObject.name;
-		//Debug.Log (instrumentName);
+		//setup mixer output
+		string _OutputMixer = ("Channel" + this.name);       
+		audioSource.outputAudioMixerGroup = mixer.FindMatchingGroups(_OutputMixer)[0];
 
-		//setup input buffer to store clip of floats
+		//setup input buffer to store clip of floats and set to end of buffer
 		sampleBuffer = new float[numSamples];
 		audioClip.GetData (sampleBuffer, 0);
+		playhead = numSamples - 1;
+		//new GameObject
+
+		//wait for everything to be set up then start metro
+		Metronome.metro.ready = true;
 	}
 
 	void OnAudioFilterRead(float[] samples, int channels)
 	{
-
-		int metroTickPos = Metronome.metro.getMetroTickSample ();
-
-		for (int i = 0; i < DSPBufferingSize; i++) {
-			if (i == metroTickPos) {
-				playhead = 0;
-			}
-			if (scoreScript.snareScore [Metronome.metro.currentSixteenth] == 1)
-				gain = 1.0f;
-			else
-				gain = 0.0f;
-
+		for (int i = 0; i < DSPBufferingSize; i++) 
+		{
+			phasor++;
 			if (playhead < numSamples - 1)
 				playhead++;
+
+			if (phasor == Metronome.metro.samplesPerTick) {
+				phasor = 0;
+
+				if(score[Metronome.metro.currentTick])
+					playhead = 0;
+				}
 			samples [i] = sampleBuffer[playhead] * gain;
 		}
 	}
